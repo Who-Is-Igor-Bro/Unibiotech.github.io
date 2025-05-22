@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+.main-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image-placeholder {
+    background: #f0f0f0;
+    height: 150px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card h2 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.price {
+    font-weight: bold;
+    color: #28a745;
+    font-size: 1.2rem;
+}
+
+.product-detail {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.product-info {
+    background: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.description {
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+.whatsapp-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #25D366;
+    text-align: center;
+    padding: 1rem;
+}
+
+.whatsapp-footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 1rem;
+    }
+    
+    .product-card h2 {
+        font-size: 1rem;
+    }
+    
+    .product-detail {
+        margin: 1rem;
+    }
+}
+
+#searchInput {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+#searchButton {
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.text-success {
+    color: #28a745 !important; /* Verde padrão do Bootstrap, mas pode ser personalizado */
+}
+.badge.bg-success {
+    font-size: 0.9rem;
+    padding: 0.5em 0.75em;
+}
