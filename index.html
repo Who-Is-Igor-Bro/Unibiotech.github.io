@@ -1,114 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Produtos - Unibiotech</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unibiotech</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Cabeçalho Simples -->
-    <header class="bg-primary text-white py-3">
-        <div class="container text-center">
-            <h1>Catálogo de Produtos</h1>
+<body class="bg-gray-100 text-gray-900">
+  <!-- Cabeçalho -->
+  <header class="bg-blue-600 text-white p-4 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Unibiotech</h1>
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+      <nav id="menu" class="menu-hidden md:flex flex-col md:flex-row absolute md:static top-16 left-0 w-full bg-blue-600 md:bg-transparent md:w-auto">
+        <a href="#apresentacao" class="px-4 py-2 hover:bg-blue-700 md:hover:bg-transparent md:hover:text-blue-200">Apresentação</a>
+        <a href="#produtos" class="px-4 py-2 hover:bg-blue-700 md:hover:bg-transparent md:hover:text-blue-200">Produtos</a>
+        <a href="#historia" class="px-4 py-2 hover:bg-blue-700 md:hover:bg-transparent md:hover:text-blue-200">História</a>
+        <a href="#contato" class="px-4 py-2 hover:bg-blue-700 md:hover:bg-transparent md:hover:text-blue-200">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Apresentação -->
+  <section id="apresentacao" class="bg-blue-500 text-white py-16">
+    <div class="container mx-auto text-center px-4 fade-in">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">unibiotech Inovação em Fermentos e Coagulantes</h2>
+      <p class="text-lg mb-6">Líder em soluções para a indústria alimentícia, oferecendo fermentos e coagulantes de alta qualidade para laticínios.</p>
+      <a href="#contato" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100">Saiba Mais</a>
+    </div>
+  </section>
+
+  <!-- Produtos -->
+  <section id="produtos" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-600 mb-6 text-center fade-in">Nossos Produtos</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!--P1-->
+        <div class="product-card bg-gray-100 p-6 rounded-lg shadow-md fade-in" style="animation-delay: 0.2s;">
+          <div class="h-40 bg-blue-200 rounded"></div>
+          <h3 class="text-xl font-semibold text-blue-600 mt-4">BIOMAX 1.000 IMCU/mL</h3>
+          <p class="text-gray-700">Solução líquida pura de quimosina 100% para todos os tipos de queijos.</p>
         </div>
-    </header>
-
-    <!-- Barra de Pesquisa -->
-    <section class="container my-4">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="input-group">
-                    <input type="text" id="searchInput" class="form-control" placeholder="Pesquisar produtos..." aria-label="Pesquisar produtos">
-                    <button class="btn btn-primary" type="button" id="searchButton">
-                        <i class="bi bi-search"></i> Buscar
-                    </button>
-                </div>
-            </div>
+     <!--P2-->
+        <div class="product-card bg-gray-100 p-6 rounded-lg shadow-md fade-in" style="animation-delay: 0.4s;">
+          <div class="h-40 bg-blue-200 rounded"></div>
+          <h3 class="text-xl font-semibold text-blue-600 mt-4">MICROFILTER 1.200 IMCU/L</h3>
+          <p class="text-gray-700">Coagulante líquido Rhizomucor mihei para todos os tipos de queijos.</p>
         </div>
-    </section>
-
-    <!-- Conteúdo Principal -->
-    <main class="container my-5">
-        <div class="row" id="productList">
-            <!-- Produtos carregados aqui -->
+    <!--P3-->
+      <div class="product-card bg-gray-100 p-6 rounded-lg shadow-md fade-in" style="animation-delay: 0.4s;">
+          <div class="h-40 bg-blue-200 rounded"></div>
+          <h3 class="text-xl font-semibold text-blue-600 mt-4">DI 50 U</h3>
+          <p class="text-gray-700">Fermento com Streptococcus salivarius subsp. thermophilus, Lactobacillus delbrueckii subsp. bulgaricus, Lactobacillus helveticus.</p>
         </div>
-    </main>
-
-    <!-- Rodapé -->
-    <footer class="bg-primary text-white py-3">
-        <div class="container text-center">
-            <p>© Unibiotech - Todos os direitos reservados</p>
+    <!--P4-->
+     <div class="product-card bg-gray-100 p-6 rounded-lg shadow-md fade-in" style="animation-delay: 0.4s;">
+          <div class="h-40 bg-blue-200 rounded"></div>
+          <h3 class="text-xl font-semibold text-blue-600 mt-4">TESTE PERÓXIDO</h3>
+          <p class="text-gray-700">Tiras reagentes para detecção de peróxido em leite, leite em pó, água, produtos lácteos e controles residuais.</p>
         </div>
-    </footer>
+    <!--       ------------------------------------------         -->
+      </div>
+    </div>
+  </section>
 
-    <!-- Carrega os produtos -->
-    <script src="products.js"></script>
+  <!-- História -->
+  <section id="historia" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-600 mb-6 text-center fade-in">Nossa História</h2>
+      <div class="space-y-8">
+        <div class="timeline-item flex items-center">
+          <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mr-4">2000</div>
+          <div>
+            <h3 class="text-lg font-semibold text-blue-600">Fundação da unibiotech</h3>
+            <p class="text-gray-700">Iniciamos nossa jornada com a missão de inovar na indústria.</p>
+          </div>
+        </div>
+        <div class="timeline-item flex items-center">
+         <!-- <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mr-4">2005</div>
+          <div>
+            <h3 class="text-lg font-semibold text-blue-600">Expansão Internacional</h3>
+            <p class="text-gray-700">Levamos nossos produtos para mercados globais, atendendo grandes marcas.</p>
+          </div>
+        </div> -->
+        <div class="timeline-item flex items-center">
+          <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mr-4">2020</div>
+          <div>
+            <h3 class="text-lg font-semibold text-blue-600">Inovação Sustentável</h3>
+            <p class="text-gray-700">linhas de produtos focados em sustentabilidade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Script para exibir e filtrar os produtos -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const container = document.getElementById('productList');
-            const searchInput = document.getElementById('searchInput');
-            const searchButton = document.getElementById('searchButton');
+  <!-- Contato -->
+  <section id="contato" class="py-16 bg-blue-600 text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center fade-in">Entre em Contato</h2>
+      <div class="max-w-md mx-auto">
+        <div class="mb-4">
+          <label for="nome" class="block text-sm font-medium">Nome</label>
+          <input type="text" id="nome" class="w-full p-2 rounded bg-white text-gray-900">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium">E-mail</label>
+          <input type="email" id="email" class="w-full p-2 rounded bg-white text-gray-900">
+        </div>
+        <div class="mb-4">
+          <label for="mensagem" class="block text-sm font-medium">Mensagem</label>
+          <textarea id="mensagem" class="w-full p-2 rounded bg-white text-gray-900" rows="4"></textarea>
+        </div>
+        <button onclick="alert('Mensagem enviada! Entraremos em contato em breve.')" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 w-full">Enviar</button>
+      </div>
+    </div>
+  </section>
 
-            // Função para renderizar os produtos
-            function renderProducts(products) {
-                if (!products || products.length === 0) {
-                    container.innerHTML = `
-                        <div class="col-12 text-center text-muted">
-                            <p>Nenhum produto encontrado.</p>
-                        </div>
-                    `;
-                    return;
-                }
+  <!-- Rodapé -->
+  <footer class="bg-blue-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>© Todos os direitos reservados.</p>
+      <div class="mt-4">
+        <a href="#" class="text-blue-200 hover:text-white mx-2">Facebook</a>
+        <a href="#" class="text-blue-200 hover:text-white mx-2">Instagram</a>
+        <a href="#" class="text-blue-200 hover:text-white mx-2">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
 
-                container.innerHTML = products.map(product => `
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body">
-                                <h5 class="card-title text-primary">${product.name}</h5>
-                                <p class="card-text">${product.description.substring(0, 100)}${product.description.length > 100 ? '...' : ''}</p>
-                                <a href="view_product.html?id=${product.id}" class="btn btn-primary">Ver Detalhes</a>
-                            </div>
-                        </div>
-                    </div>
-                `).join('');
-            }
-
-            // Verifica se products.js carregou corretamente
-            if (typeof productsData === 'undefined') {
-                container.innerHTML = `
-                    <div class="col-12 text-center text-danger">
-                        <p>Erro ao carregar os produtos. Verifique o arquivo products.js ou recarregue a página.</p>
-                    </div>
-                `;
-                return;
-            }
-
-            // Renderiza todos os produtos inicialmente
-            renderProducts(productsData);
-
-            // Função de filtro
-            function filterProducts() {
-                const searchTerm = searchInput.value.toLowerCase().trim();
-                const filteredProducts = productsData.filter(product =>
-                    product.name.toLowerCase().includes(searchTerm) ||
-                    product.description.toLowerCase().includes(searchTerm)
-                );
-                renderProducts(filteredProducts);
-            }
-
-            // Evento para o botão de busca
-            searchButton.addEventListener('click', filterProducts);
-
-            // Evento para busca em tempo real (opcional, ao digitar)
-            searchInput.addEventListener('input', filterProducts);
-        });
-    </script>
-
-    <!-- Inclui ícones do Bootstrap (para o ícone de busca) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="scripts.js"></script>
 </body>
 </html>
